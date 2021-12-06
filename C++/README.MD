@@ -6,14 +6,12 @@ This repository contains a C++ implementation of the ViBe background subtraction
 
 The following instructions will help you install the required libraries
 
-Dependencies
-------------
+### Dependencies
 
 - Boost
 - OpenCV (only if you want to compile the example programs)
 
-Compilation
------------
+### Compilation
 
 The compilation process has been tested on Linux Mint 17.3 and OS X El Capitan.
 
@@ -46,8 +44,7 @@ or the Intel compiler:
 cmake -DCMAKE_CXX_COMPILER=icpc -DCMAKE_BUILD_TYPE=Release ..
 make
 ```
-Installation
-------------
+### Installation
 
 To install the libvibe++ onto your system after the compilation step, you can
 enter the following command (in superuser mode):
@@ -63,14 +60,12 @@ sudo make install
 
 The files will be installed into '/usr/local'.
 
-Compilation of a program using the libvibe++
---------------------------------------------
+### Compilation of a program using the libvibe++
 
 To compile a program using the libvibe++, you must use the '-lvibe++' linkage
 flag.
 
-Execution of a program using the libvibe++
-------------------------------------------
+### Execution of a program using the libvibe++
 
 If you encounter the following error:
 
