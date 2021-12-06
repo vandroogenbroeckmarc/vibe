@@ -1,0 +1,53 @@
+Copyright (c) 2014 holders: 
+
+- Olivier Barnich
+- Marc Van Droogenbroeck <m.vandroogenbroeck@uliege.be>
+
+
+Code Contributing Author: 
+
+- Olivier Barnich, University of Liège (ULiège), Montefiore Institute, TELIM.
+- Marc Van Droogenbroeck (M.VanDroogenbroeck@uliege.be), University of Liège (ULiège), Montefiore Institute, TELIM.
+
+
+In return for making this code available, we would appreciate that you cite the following publications:
+
+* Barnich and M. Van Droogenbroeck. ViBe: A universal background subtraction algorithm for video sequences. In IEEE Transactions on Image Processing, 20(6):1709-1724, June 2011. 
+
+* M. Van Droogenbroeck and O. Barnich. ViBe: A Disruptive Method for Background Subtraction. In T. Bouwmans, F. Porikli, B. Hoferlin, and A. Vacavant, editors, Background Modeling and Foreground Detection for Video Surveillance, chapter 7. Chapman and Hall/CRC, June 2014.
+
+BiBTeX format (see "vibe.bib" file): 
+
+```bibtex
+@article{Barnich2011ViBe,
+	title = {{ViBe}: A universal background subtraction algorithm for video sequences},
+	author = {O. Barnich and M. {Van Droogenbroeck}},
+	journal = itip,
+	year = {2011},
+	volume = {20},
+	number = {6},
+	pages = {1709-1724},
+	month = Jun,
+	keywords = {ViBe, Background, Background subtraction, Segmentation, Motion, Motion detection},
+	doi = {10.1109/TIP.2010.2101613},
+	url = {http://doi.org/10.1109/TIP.2010.2101613},
+	myurl = {http://hdl.handle.net/2268/81248}
+}
+```
+```bibtex
+@incollection{VanDroogenbroeck2014ViBe,
+  title = {{ViBe}: A Disruptive Method for Background Subtraction},
+  author = {M. {Van Droogenbroeck} and O. Barnich},
+  booktitle = {Background Modeling and Foreground Detection for Video Surveillance},
+  editor = {T. Bouwmans and F. Porikli and B. Hoferlin and A. Vacavant},
+  chapter = {7},
+  pages = {7.1-7.23},
+  month = {July},
+  year = {2014},
+  publisher = {Chapman and Hall/CRC},
+  doi = {10.1201/b17223-10},
+  url = {http://hdl.handle.net/2268/157176},
+  pdf = {http://orbi.ulg.ac.be/bitstream/2268/157176/1/VanDroogenbroeck2014ViBe.pdf}
+}
+```
+
