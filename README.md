@@ -34,7 +34,7 @@ How to cite this repository:
 	volume = {20},
 	number = {6},
 	pages = {1709-1724},
-	month = Jun,
+	month = {June},
 	keywords = {ViBe, Background, Background subtraction, Segmentation, Motion, Motion detection},
 	doi = {10.1109/TIP.2010.2101613},
 	url = {http://doi.org/10.1109/TIP.2010.2101613},
