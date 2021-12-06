@@ -1,4 +1,4 @@
-# ViBe - pytorch
+# ViBe - Pytorch
 
 This repository contains a Pytorch implementation of the ViBe background subtraction algorithm with CPU and GPU support. 
 
