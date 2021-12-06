@@ -1,6 +1,6 @@
-# ViBe - C++
+# ViBe - C
 
-This repository contains a C++ implementation of the ViBe background subtraction algorithm. 
+This repository contains a C implementation of the ViBe background subtraction algorithm. 
 
 ## Getting Started
 
