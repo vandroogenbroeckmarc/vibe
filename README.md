@@ -44,7 +44,7 @@ How to cite this repository:
 
 ## Patent
 
-Before using ViBe, be aware that it is covered by several patents (patent track: WO2009007198 / Publication date: 2009-01-15; Priority number(s): EP20070112011 20070708) / Europe (granted): EP2015252 / US (granted): US 8009918 B2 (pdf) / Japan (granted): JP 2011 4699564 B2.
+Before using ViBe, be aware that it is covered by several patents (patent track: WO2009007198 / Publication date: 2009-01-15; Priority number(s): EP20070112011 20070708) / Europe (granted): EP2015252 / US (granted): US 8009918 B2 / Japan (granted): JP 2011 4699564 B2.
 
 See the License files in each programming language for more details
 
