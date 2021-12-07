@@ -1,18 +1,17 @@
 Copyright (c) 2014 holders: 
 
-- Marc Van Droogenbroeck <m.vandroogenbroeck@uliege.be>
-
-
-Code Contributing Author: 
-
 - Marc Van Droogenbroeck (M.VanDroogenbroeck@uliege.be), University of Liège (ULiège), Montefiore Institute, TELIM.
 
 
 In return for making this code available, we would appreciate that you cite the following publications:
 
-* Barnich and M. Van Droogenbroeck. ViBe: A universal background subtraction algorithm for video sequences. In IEEE Transactions on Image Processing, 20(6):1709-1724, June 2011. 
+* Barnich and M. Van Droogenbroeck. ViBe: A universal background subtraction algorithm for video sequences. 
+  In IEEE Transactions on Image Processing, 20(6):1709-1724, June 2011. 
 
-* M. Van Droogenbroeck and O. Barnich. ViBe: A Disruptive Method for Background Subtraction. In T. Bouwmans, F. Porikli, B. Hoferlin, and A. Vacavant, editors, Background Modeling and Foreground Detection for Video Surveillance, chapter 7. Chapman and Hall/CRC, June 2014.
+* M. Van Droogenbroeck and O. Barnich. ViBe: A Disruptive Method for Background Subtraction. 
+  In T. Bouwmans, F. Porikli, B. Hoferlin, and A. Vacavant, editors, 
+  Background Modeling and Foreground Detection for Video Surveillance, chapter 7. 
+  Chapman and Hall/CRC, June 2014.
 
 BiBTeX format (see "vibe.bib" file): 
 
