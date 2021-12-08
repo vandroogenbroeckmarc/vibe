@@ -16,7 +16,7 @@ Implementations in four programming languages are provided:
 
 - [C](C): The fastest implementation of ViBe on CPU in the C language.
 - [C++](C++): An upgrade in C++ of the C implementation.
-- [Matlab](Matlab): a Matlab CPU implementation of ViBe, slower, but shows how to parallelize the computations.
+- [Matlab](Matlab): a Matlab CPU implementation of ViBe.
 - [Python](Python): a Pytorch implementation of ViBe with CPU and GPU support.
 
 ## Paper Abstract
