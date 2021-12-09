@@ -2,6 +2,10 @@
 
 This repository contains a Matlab implementation of the ViBe background subtraction algorithm. 
 
+<p align="center">
+  <img src="../img/Matlab_logo.png" height="150">
+</p>
+
 ## Getting Started
 
 To be completed
