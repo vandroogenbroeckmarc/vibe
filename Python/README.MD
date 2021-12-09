@@ -2,6 +2,12 @@
 
 This repository contains a Pytorch implementation of the ViBe background subtraction algorithm with CPU and GPU support. 
 
+<p align="center">
+  <img src="../img/Python_logo.png" height="50"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="../img/Pytorch_logo.png" height="50"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="../img/Nvidia_logo.png" height="75"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</p>
+
 ## Getting Started
 
 The following instructions will help you install the required libraries and the dataset to run the code. The code runs in <code>python 3</code> and was tested on a laptop with a RTX2070Super GPU.
