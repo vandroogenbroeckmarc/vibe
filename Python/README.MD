@@ -34,6 +34,9 @@ Then, to compute the mean F1 score on the dataset using GPU computations, simply
 python main.py --path path/to/CDNet2014/ --cdnet --device cuda
 ```
 
+<p align="center">
+  <img src="../img/BGS.png" width="480">
+</p>
 
 ### Computing the masks on any video
 
@@ -45,6 +48,7 @@ python main.py --path path/to/video/ --save_path path/to/save/masks/ --device cu
 ```
 
 The masks are saved in the the path passed to the <code>--save_path</code> argument.
+
 
 ## Authors
 
