@@ -2,6 +2,10 @@
 
 This repository contains a C++ implementation of the ViBe background subtraction algorithm. 
 
+<p align="center">
+  <img src="../img/C++_logo.png" height="150">
+</p>
+
 ## Getting Started
 
 The following instructions will help you install the required libraries
