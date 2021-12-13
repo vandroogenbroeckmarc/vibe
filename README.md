@@ -28,8 +28,8 @@ How to cite this repository:
 ```bibtex
 @article{Barnich2011ViBe,
 	title = {{ViBe}: A universal background subtraction algorithm for video sequences},
-	author = {O. Barnich and M. {Van Droogenbroeck}},
-	journal = itip,
+	author = {Barnich, Olivier and {Van Droogenbroeck}, Marc},
+	journal = {IEEE Transactions on Image Processing},
 	year = {2011},
 	volume = {20},
 	number = {6},
