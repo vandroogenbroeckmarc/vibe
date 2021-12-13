@@ -8,7 +8,11 @@ This repository contains a Matlab implementation of the ViBe background subtract
 
 ## Getting Started
 
-To be completed
+... This file is part of a library that aims at providing a matlab (not octave)
+implementation of ViBe (for using it, pay attention to the fact that
+it is a patented method, see comments below) and demonstrating how an
+implementation of ViBe can be vectorized. Whereas ViBe can be extremely
+fast, this library has not been optimized for speed.
 
 ## Authors
 
