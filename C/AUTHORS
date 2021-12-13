@@ -18,8 +18,8 @@ BiBTeX format (see "vibe.bib" file):
 ```bibtex
 @article{Barnich2011ViBe,
 	title = {{ViBe}: A universal background subtraction algorithm for video sequences},
-	author = {O. Barnich and M. {Van Droogenbroeck}},
-	journal = itip,
+	author = {Barnich, Olivier and {Van Droogenbroeck}, Marc},
+	journal = {IEEE Transactions on Image Processing},
 	year = {2011},
 	volume = {20},
 	number = {6},
@@ -34,7 +34,7 @@ BiBTeX format (see "vibe.bib" file):
 ```bibtex
 @incollection{VanDroogenbroeck2014ViBe,
   title = {{ViBe}: A Disruptive Method for Background Subtraction},
-  author = {M. {Van Droogenbroeck} and O. Barnich},
+  author = {{Van Droogenbroeck}, Marc and Barnich, Olivier},
   booktitle = {Background Modeling and Foreground Detection for Video Surveillance},
   editor = {T. Bouwmans and F. Porikli and B. Hoferlin and A. Vacavant},
   chapter = {7},
