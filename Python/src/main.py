@@ -120,6 +120,40 @@ def video_motion_detection(video_path, algorithmn, device="cpu", median=None, sa
                     frame_path = save_path + "/bin" + (str(i+1)).zfill(6) + ".png"
                     cv2.imwrite(frame_path, frame_numpy)
 
+def timing(video_path, algorithmn, device="cpu"):
+
+    start = torch.cuda.Event(enable_timing=True)
+    end = torch.cuda.Event(enable_timing=True)
+    resolutions = ["144p","224p","360p", "576p", "720p","1080p","2160p"]
+
+    for video_name in resolutions:
+
+        video = Video(video_path + video_name + ".mp4")
+
+        timing = 0
+        # Loop over the video
+        with tqdm(enumerate(video), total=len(video), ncols=120) as t:
+                for i, (image) in t:
+
+                    # Send the image to the device
+                    image = image.to(device)
+
+                    # Initialize ViBe with the first image
+                    if i == 0:
+                        vibe.initialize(image)
+
+                    torch.cuda.synchronize()
+                    # Segment the current image and update the background model
+                    start.record()
+                    mask = vibe.segment(image)
+                    end.record()
+                    torch.cuda.synchronize()
+                    timing += start.elapsed_time(end)
+                    
+
+        print(video_name, " : ", timing/len(video), "ms/frame")
+        print(video_name, " : ", 1000/(timing/len(video)), "fps")
+
 if __name__ == '__main__':
 
     # Load the arguments
@@ -128,6 +162,7 @@ if __name__ == '__main__':
     parser.add_argument('--path',   required=True, type=str, help='Path to the video or CDNet dataset' )
     parser.add_argument('--savepath',   required=False, type=str, default = None, help='Path to save the masks' )
     parser.add_argument('--cdnet',   required=False, action='store_true',  help='Evaluation on CDNet' )
+    parser.add_argument('--timing',   required=False, action='store_true',  help='Timing on the crossing videos' )
     parser.add_argument('--device',   required=False, type=str, default = "cpu", help='Device on which to run the computations' )
     parser.add_argument('--median',   required=False, type=int,   default=9,     help='Kernel size for the median filter' )
 
@@ -155,8 +190,10 @@ if __name__ == '__main__':
     median = args.median
     if median <= 0:
         median=None
-
-    if args.cdnet:
+    
+    if args.timing:
+        timing(args.path, vibe, device)
+    elif args.cdnet:
         # Compute the mean F1 score on CDNet 2014
         CDNet_motion_detection(args.path, vibe, device, median)
     else:
