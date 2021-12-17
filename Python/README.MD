@@ -49,6 +49,27 @@ python main.py --path path/to/video/ --save_path path/to/save/masks/ --device cu
 
 The masks are saved in the the path passed to the <code>--save_path</code> argument.
 
+### Timing on your device
+
+Finally, we provide some code and data to evaluate the computation time of ViBe on your own device.
+First download the data through this [link]().
+
+Then run the following command line:
+
+```bash
+python main.py --path path/to/timing/data/ --timing --device cuda
+```
+
+Here are the results of our tests on two of our device for different resolutions:
+
+|Framerate (FPS)|144p|224p|360p|576p|720p (HD)| 1080p (Full HD)| 2160p (4K)|
+|---------------|----|----|----|----|----|----|----|
+|DGX-1 (GPU Tesla V100)|488|387|266|150|106|55|15|
+|Laptop (GPU RTX2070SuperMaxQ)|669|411|219|99|64|30|Out of memory|
+|DGX-1 (CPU)|184|43|21|9|5|2|0.5|
+|Laptop (CPU)|126|49|18|7|5|2|0.5|
+
+It can be seen that this python implementation in pytorch is really suited for GPU.
 
 ## Authors
 
