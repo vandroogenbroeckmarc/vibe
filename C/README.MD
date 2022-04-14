@@ -8,7 +8,7 @@ This repository contains a C implementation of the ViBe background subtraction a
 
 ## Getting Started
 
-The complete documentation for this library can be found at the following address: [http://www2.ulg.ac.be/telecom/research/vibe/doc/index.html](http://www2.ulg.ac.be/telecom/research/vibe/doc/index.html)
+The complete documentation for this library can be found at the following address: [http://www.telecom.ulg.ac.be/research/vibe/doc/index.html](http://www2.ulg.ac.be/telecom/research/vibe/doc/index.html)
 
 ### Library components
 
