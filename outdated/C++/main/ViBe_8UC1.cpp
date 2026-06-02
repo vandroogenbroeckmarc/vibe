@@ -1,5 +1,5 @@
-/* Copyright - Benjamin Laugraud <blaugraud@ulg.ac.be> - 2016
- * Copyright - Marc Van Droogenbroeck <m.vandroogenbroeck@ulg.ac.be> - 2016
+/* Copyright - Benjamin Laugraud - 2016
+ * Copyright - Marc Van Droogenbroeck - 2016
  *
  * ViBe is covered by a patent (see http://www.telecom.ulg.ac.be/research/vibe).
  *
