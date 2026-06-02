@@ -1,0 +1,11 @@
+@PACKAGE_INIT@
+
+# vibeConfig.cmake
+#
+# Downstream users can:
+#   find_package(vibe CONFIG REQUIRED)
+#   target_link_libraries(my_app PRIVATE vibe::vibe)
+
+include("${CMAKE_CURRENT_LIST_DIR}/vibeTargets.cmake")
+
+check_required_components(vibe)
