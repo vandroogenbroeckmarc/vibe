@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "libvibepp",
+  "version": "2.0.0",
+  "description": "ViBe: a universal background subtraction algorithm for video sequences (C++ implementation).",
+  "homepage": "http://www.telecom.ulg.ac.be/research/vibe",
+  "license": null,
+  "dependencies": [
+    {
+      "name": "opencv4",
+      "default-features": false,
+      "features": [
+        "highgui",
+        "jpeg",
+        "png",
+        "tiff"
+      ]
+    }
+  ],
+  "features": {
+    "examples": {
+      "description": "Build the ViBe_8UC1 / ViBe_8UC3 example programs (requires OpenCV)"
+    }
+  }
+}
