@@ -1,6 +1,6 @@
-# ViBe: A universal background subtraction algorithm for video sequences
+# ViBe: A universal background subtraction algorithm for video sequences - Open source (C, C++, Python) and FREE to use versions!
 
-### NEWS: ViBe is now available for free even in commercial applications!
+### [2026] NEWS: ViBe is now available for free even in commercial applications!
 
 
 This repository contains several implementations of ViBe, a real-time algorithm for background subtraction.
@@ -16,12 +16,21 @@ Innovations:
 
 Implementations in four programming languages are provided:
 
-- [C](C): an implementation of ViBe on CPU in the C language.
-- [C++](C++): an alternative implementation in C++.
+- [C-modernized](C-modernized): an implementation of ViBe on CPU in the C language (simple)
+- [C++-modernized](C++-modernized): the reference implementation in C++.
 - [Matlab](Matlab): a Matlab CPU implementation of ViBe.
-- [Python](Python): a Pytorch implementation of ViBe with CPU and GPU support.
+- [python-from-c++-modernized](python-from-c++-modernized): a Python implementation of ViBe with CPU support.
 
-Note that the parameters used in our implementation have changed. They are now: 
+## Note for use
+
+1. The [C++-modernized](C++-modernized) and [python-from-c++-modernized](python-from-c++-modernized) have a target for benchmarking. 
+You can run them by applying
+```
+make demo-benchmark
+```
+
+2. Parameters used in the implementations have changed. They are now: 
+
 | Symbol | Name                                          | Original    |     New      | 
 | :----: | --------------------------------------------- | :---------: | :----------: | 
 | N      | `numberOfSamples` (samples per pixel model)   |      20     |      30      | 
