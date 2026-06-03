@@ -38,11 +38,16 @@ ViBeBase::ViBeBase(
   int32_t height,
   int32_t width,
   int32_t channels,
-  const uint8_t* buffer
+  const uint8_t* buffer,
+  int32_t numberOfSamples_
 ) :
   height(height),
   width(width),
-  numberOfSamples(DEFAULT_NUMBER_OF_SAMPLES),
+  numberOfSamples(
+    (numberOfSamples_ > static_cast<int32_t>(NUMBER_OF_HISTORY_IMAGES))
+      ? static_cast<uint32_t>(numberOfSamples_)
+      : DEFAULT_NUMBER_OF_SAMPLES
+  ),
   matchingThreshold(DEFAULT_MATCHING_THRESHOLD),
   matchingNumber(DEFAULT_MATCHING_NUMBER),
   updateFactor(DEFAULT_UPDATE_FACTOR),

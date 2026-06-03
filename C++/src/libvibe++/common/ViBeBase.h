@@ -64,11 +64,16 @@ namespace ViBe {
 
     protected:
 
+      /* If `numberOfSamples_` is <= 0, DEFAULT_NUMBER_OF_SAMPLES is used.
+       * Otherwise the model is built with the requested sample count
+       * (must be > NUMBER_OF_HISTORY_IMAGES). The buffer sizes depend on
+       * this value, which is why it has to be set at construction time. */
       ViBeBase(
         int32_t height,
         int32_t width,
         int32_t channels,
-        const uint8_t* buffer
+        const uint8_t* buffer,
+        int32_t numberOfSamples_ = -1
       );
 
     public:

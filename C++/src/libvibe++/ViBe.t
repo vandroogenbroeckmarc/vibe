@@ -23,12 +23,14 @@ template <int32_t Channels, class Distance>
 ViBeSequential<Channels, Distance>::ViBeSequential(
   int32_t height,
   int32_t width,
-  const uint8_t* buffer
+  const uint8_t* buffer,
+  int32_t numberOfSamples_
 ) : Base(
     height,
     width,
     Channels,
-    buffer
+    buffer,
+    numberOfSamples_
   ) {}
 
 /******************************************************************************/

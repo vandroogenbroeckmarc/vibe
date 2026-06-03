@@ -31,10 +31,14 @@ namespace ViBe {
 
     public:
 
+      /* `numberOfSamples_` is forwarded to ViBeBase: pass <= 0 (default)
+       * to use DEFAULT_NUMBER_OF_SAMPLES, or an explicit value > 2 to
+       * size the model buffers for that many samples per pixel. */
       ViBeSequential(
         int32_t height,
         int32_t width,
-        const uint8_t* buffer
+        const uint8_t* buffer,
+        int32_t numberOfSamples_ = -1
       );
 
       virtual ~ViBeSequential() {}

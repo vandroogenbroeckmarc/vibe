@@ -15,11 +15,10 @@
  * ------------
  *  * Header-only, no external dependencies beyond OpenCV and the C++17
  *    standard library (std::filesystem).
- *  * --samples is accepted but not honored: libvibe++ hard-codes
- *    DEFAULT_NUMBER_OF_SAMPLES = 30 as a static const in ViBeBase, with no
- *    public setter and no runtime reallocation of the sample buffer. The
- *    CLI prints a warning when the flag is used. Every other option is
- *    fully wired through.
+ *  * --samples is honored: libvibe++ accepts an explicit numberOfSamples
+ *    at construction time (sized buffers depend on it, so it has to be
+ *    set then). The CLI forwards opts.samples straight to the ViBe
+ *    constructor; -1 keeps the library default of 30.
  *  * --color is accepted but is a no-op at the per-binary level: ViBe_8UC1
  *    is already the grayscale variant and ViBe_8UC3 the color one. The
  *    flag exists only so the two CLIs accept the exact same argv the
@@ -113,8 +112,7 @@ inline void printUsage(const char* prog, std::ostream& os = std::cout) {
     "                         per-frame (segmentation + update) min, max,\n"
     "                         mean, median, stdev, p95, p99 in ms.\n"
     "  --samples N            Override the number of samples per pixel\n"
-    "                         (not honored by this binary; the compiled\n"
-    "                         library fixes this to 30 — warning only).\n"
+    "                         (default 30). Must be > 2.\n"
     "  --threshold N          Override the matching threshold (default 10).\n"
     "  --matches N            Override the number of matches required\n"
     "                         (default 2).\n"
@@ -276,10 +274,10 @@ inline int parseArgs(int argc, char** argv, Options& opts) {
 
   opts.video = positional.front();
 
-  if (opts.samples > 0) {
-    std::cerr << prog << ": warning: --samples is not honored by this "
-              << "binary (libvibe++ fixes DEFAULT_NUMBER_OF_SAMPLES = 30 in "
-              << "ViBeBase.h without a public setter). Value ignored.\n";
+  if (opts.samples >= 0 && opts.samples <= 2) {
+    std::cerr << prog << ": error: --samples must be > 2 "
+              << "(NUMBER_OF_HISTORY_IMAGES = 2 is reserved).\n";
+    return -1;
   }
 
   // --benchmark implies: no display, no median post-processing, no output.

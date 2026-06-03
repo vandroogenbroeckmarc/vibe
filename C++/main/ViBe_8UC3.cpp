@@ -95,7 +95,8 @@ int main(int argc, char** argv) {
   while (decoder->read(frame)) {
     if (!vibe) {
       /* Instantiation of ViBe on the first frame. */
-      vibe = std::make_unique<ViBeImpl>(height, width, frame.data);
+      vibe = std::make_unique<ViBeImpl>(
+        height, width, frame.data, opts.samples);
 
       if (opts.threshold > 0) {
         vibe->setMatchingThreshold(opts.threshold);

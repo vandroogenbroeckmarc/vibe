@@ -101,7 +101,8 @@ int main(int argc, char** argv) {
 
     if (!vibe) {
       /* Instantiation of ViBe on the first frame. */
-      vibe = std::make_unique<ViBeImpl>(height, width, bwFrame.data);
+      vibe = std::make_unique<ViBeImpl>(
+        height, width, bwFrame.data, opts.samples);
 
       if (opts.threshold > 0) {
         vibe->setMatchingThreshold(opts.threshold);

@@ -35,7 +35,8 @@ namespace ViBe {
         int32_t height,
         int32_t width,
         int32_t channels,
-        const uint8_t* buffer
+        const uint8_t* buffer,
+        int32_t numberOfSamples_ = -1
       );
 
     public:
