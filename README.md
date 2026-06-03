@@ -16,14 +16,14 @@ Innovations:
 
 Implementations in four programming languages are provided:
 
-- [C-modernized](C-modernized): an implementation of ViBe on CPU in the C language (simple)
-- [C++-modernized](C++-modernized): the reference implementation in C++.
+- [C](C): an implementation of ViBe on CPU in the C language (simple implementation)
+- [C++](C++): the reference implementation in C++.
 - [Matlab](Matlab): a Matlab CPU implementation of ViBe.
-- [python-from-c++-modernized](python-from-c++-modernized): a Python implementation of ViBe with CPU support.
+- [python](python): a Python implementation of ViBe with CPU support.
 
 ## Note for use
 
-1. The [C++-modernized](C++-modernized) and [python-from-c++-modernized](python-from-c++-modernized) have a target for benchmarking. 
+1. The [C++](C++) and [python](python) have a target for benchmarking. 
 You can run them by applying
 ```
 make demo-benchmark
@@ -68,4 +68,4 @@ Initially ViBe was covered by several patents (patent track: WO2009007198 / Publ
 
 ## License
 
-See the LICENSE file at top level.
+Apache License v2.
