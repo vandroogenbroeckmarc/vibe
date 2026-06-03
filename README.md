@@ -34,8 +34,8 @@ Python port, a directory of `radical<digits>.{jpg,jpeg,png}` frames.
 python3 main.py --color path/to/clip.avi
 
 # Headless benchmark, deterministic seed, 500-frame cap:
-./build/bin/ViBe_8UC3 --benchmark --max-frames 500 --seed 42 path/to/clip.avi
-python3 main.py --benchmark --max-frames 500 --seed 42 path/to/clip.avi
+./build/bin/ViBe_8UC3 --benchmark --max-frames 500 --samples 20 --seed 42 path/to/clip.avi
+python3 main.py --benchmark --max-frames 500 --samples 20 --seed 42 path/to/clip.avi
 ```
 
 | Flag                       | Effect                                                                                  |
