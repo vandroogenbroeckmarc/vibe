@@ -21,6 +21,38 @@ Implementations in four programming languages are provided:
 - [Matlab](Matlab): a Matlab CPU implementation of ViBe.
 - [python](python): a Python implementation of ViBe with CPU support.
 
+## Command line interface (CLI) usage
+
+The [C++](C++) binaries (`ViBe_8UC1`, `ViBe_8UC3`) and the [python](python) driver
+(`python`) expose the same flags. The positional
+argument is a video file (any format OpenCV can decode) or, for the
+Python port, a directory of `radical<digits>.{jpg,jpeg,png}` frames.
+
+```bash
+# Quick interactive preview:
+./build/bin/ViBe_8UC1 path/to/clip.avi
+python3 main.py --color path/to/clip.avi
+
+# Headless benchmark, deterministic seed, 500-frame cap:
+./build/bin/ViBe_8UC3 --benchmark --max-frames 500 --seed 42 path/to/clip.avi
+python3 main.py --benchmark --max-frames 500 --seed 42 path/to/clip.avi
+```
+
+| Flag                       | Effect                                                                                  |
+| -------------------------- | --------------------------------------------------------------------------------------- |
+| `--color`                  | Use the 3-channel (color) variant. In C++ this flag exists for parity; pick the matching binary (`ViBe_8UC3`). |
+| `--no-display`             | Headless mode — do not open OpenCV preview windows.                                     |
+| `--no-median`              | Skip the 3 × 3 median post-processing.                                                  |
+| `-o`, `--output PATH`      | Write masks to a video file (`.mp4`, `.avi`, …) or to a folder (PNG-per-frame).         |
+| `--benchmark`              | Pure-algorithm timing report. Implies `--no-display --no-median`; any `--output` is ignored. Prints min / max / mean / median / stdev / p95 / p99 per-frame ms. |
+| `--samples N`              | Number of samples per pixel (default 30).                                               |
+| `--threshold R`            | Matching threshold (default 10).                                                        |
+| `--matches M`              | Minimum number of matches `#min` (default 2).                                           |
+| `--update-factor PHI`      | Subsampling factor φ (default 8).                                                       |
+| `--seed S`                 | RNG seed for reproducible runs.                                                         |
+| `--max-frames K`           | Stop after K frames (useful for tests and benchmarks).                                  |
+| `-h`, `--help`             | Print help and exit.                                                                    |
+
 ## Note for use
 
 1. The [C++](C++) and [python](python) have a target for benchmarking. 
@@ -63,7 +95,7 @@ Please cite our work if you use ViBe:
 
 ## Patent
 
-** [NEW FROM 01/2026] ViBe is now totally free, even for commercial uses!**. 
+** [NEW FROM 01/2026] ViBe is now totally free, even for commercial usages!**. 
 Initially ViBe was covered by several patents (patent track: WO2009007198 / Publication date: 2009-01-15; Priority number(s): EP20070112011 20070708) / Europe (granted): EP2015252 / US (granted): US 8009918 B2 / Japan (granted): JP 2011 4699564 B2.
 
 ## License
